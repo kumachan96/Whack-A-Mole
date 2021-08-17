@@ -15,3 +15,30 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.center {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.MainScreen {
+  border: 3px solid blue;
+}
+
+.GameScreen {
+  border: 3px solid pink;
+}
+
+.GameOverScreen {
+  border: 3px solid red;
+}
+
+.game {
+  display: grid;
+  width: 50%;
+  height: 50%;
+  border: 3px solid purple;
+}

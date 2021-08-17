@@ -9,6 +9,35 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Whack A Mole</h1>
-</body>
+    <div class="everything center">
+      <div class="MainScreen">
+        <h1 class="center">WHACK-A-MOLE</h1>
+        <button type="button" class="button">Play</button>
+      </div>
+
+      <div class="GameScreen">
+        <div class="UtilBar">
+          <span id="time">Time : 59</span>
+          <span id="score">Score : 00</span>
+        </div>
+        <div class="container game center">
+          <img
+            src="https://c.tenor.com/hB9OTbewrikAAAAi/work-work-in-progress.gif"
+            alt="GAME"
+            class="center"
+          />
+        </div>
+      </div>
+
+      <div class="GameOverScreen">
+        <h2>Game Over</h2>
+        <h2>Time's Up !!</h2>
+        <p id="score">Your score is 000</p>
+        <div class="gameOver buttons">
+          <button type="button" class="button">Play Again</button>
+          <button type="button" class="button">Main Menu</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
