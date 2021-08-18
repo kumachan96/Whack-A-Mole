@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whack A Mole</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="everything center">
-      <div class="MainScreen">
-        <h1 class="center">WHACK-A-MOLE</h1>
-        <button type="button" class="button">Play</button>
+  </head>
+  <body>
+    <div class="container center">
+      <div id="main-screen">
+        <h1>WHACK-A-MOLE</h1>
+        <button id="play-btn" class="play-btn btn">Play</button>
       </div>
-
-      <div class="GameScreen">
+      <div id="game-screen" class="hide">
         <div class="UtilBar">
           <span id="time">Time : 59</span>
+          <button type="button" class="button">Pause</button>
           <span id="score">Score : 00</span>
         </div>
         <div class="container game center">
@@ -28,14 +28,13 @@
           />
         </div>
       </div>
-
-      <div class="GameOverScreen">
+      <div id="game-over-screen" class="hide">
         <h2>Game Over</h2>
         <h2>Time's Up !!</h2>
         <p id="score">Your score is 000</p>
-        <div class="gameOver buttons">
-          <button type="button" class="button">Play Again</button>
-          <button type="button" class="button">Main Menu</button>
+        <div class="controls">
+          <button id="play-again-btn" class="play-btn btn">Play Again</button>
+          <button id="main-menu-btn" class="menu-btn btn">Main Menu</button>
         </div>
       </div>
     </div>
