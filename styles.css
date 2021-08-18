@@ -45,6 +45,18 @@ body {
   color:white;
 }
 
+.pause-btn {
+  border-color: lightcoral;
+  background-color: lightcoral;
+  color: white;
+}
+
+.pause-btn:hover{
+  background-color:lightsalmon;
+  border-color: lightsalmon;
+  color:lightcoral;
+}
+
 .hide{
   display:none;
 }
