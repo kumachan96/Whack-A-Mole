@@ -18,13 +18,37 @@ function show_hide(showPage, hidePage) {
   showPage.classList.remove("hide");
 }
 
+var timeout, timeLeft;
+timeLeft = document.getElementById("timeleft").innerHTML;
+
+function timerDisplay() {
+  document.getElementById("timeleft").innerHTML = timeLeft;
+}
+
+function timerCountdown() {
+  timerDisplay();
+  console.log(`timeleft :${timeLeft}`);
+  if (timeLeft == 0) {
+    gameOver();
+  } else {
+    timeLeft--;
+    timeout = setTimeout("timerCountdown()", 1000);
+  }
+}
+
 function startGame() {
   console.log(`Game started`);
   show_hide(gameScreen, mainScreen);
+  timerCountdown();
+}
+
+function gameOver() {
+  show_hide(gameOverScreen, gameScreen);
 }
 
 function pauseGame() {
   console.log(`Game paused`);
+  // timerPause();
   show_hide(gameOverScreen, gameScreen);
 }
 
@@ -36,5 +60,6 @@ function mainMenu() {
 function playAgain() {
   console.log(`Pressed play again`);
   show_hide(gameScreen, gameOverScreen);
+  startGame();
   // reset score and the timer
 }
