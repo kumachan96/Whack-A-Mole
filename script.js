@@ -8,6 +8,8 @@ const mainScreen = document.getElementById("main-screen");
 const gameScreen = document.getElementById("game-screen");
 const gameOverScreen = document.getElementById("game-over-screen");
 
+const GAME_TIME_SECONDS = 10;
+
 playButton.addEventListener("click", startGame);
 pauseButton.addEventListener("click", pauseGame);
 playAgainButton.addEventListener("click", playAgain);
@@ -21,6 +23,10 @@ function show_hide(showPage, hidePage) {
 var timeout, timeLeft;
 timeLeft = document.getElementById("timeleft").innerHTML;
 
+function timerReset(){
+  document.getElementById("timeleft").innerHTML = GAME_TIME_SECONDS;
+}
+
 function timerDisplay() {
   document.getElementById("timeleft").innerHTML = timeLeft;
 }
@@ -29,6 +35,7 @@ function timerCountdown() {
   timerDisplay();
   console.log(`timeleft :${timeLeft}`);
   if (timeLeft == 0) {
+    timeLeft = GAME_TIME_SECONDS;
     gameOver();
   } else {
     timeLeft--;
@@ -39,6 +46,7 @@ function timerCountdown() {
 function startGame() {
   console.log(`Game started`);
   show_hide(gameScreen, mainScreen);
+  timerReset();
   timerCountdown();
 }
 
