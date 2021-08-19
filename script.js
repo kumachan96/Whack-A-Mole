@@ -35,6 +35,6 @@ function mainMenu() {
 
 function playAgain() {
   console.log(`Pressed play again`);
-  show_hide(gameOverScreen, gameScreen);
+  show_hide(gameScreen, gameOverScreen);
   // reset score and the timer
 }
