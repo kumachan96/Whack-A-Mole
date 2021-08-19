@@ -2,15 +2,17 @@
 
 ### :x: Todo 
 
-- [ ] Work on the timer
-- [ ] work the game (Whack-A-Mole) 
 - [ ] Further Front-end work
 - [ ] Tidy up the code base
 
 ### :warning: In Progress 
-- [ ] Work on the screens and their routing.
+
+- [ ] work the game (Whack-A-Mole) 
 
 ### :white_check_mark: Done 
 
 - [x] Design the web-app 
 - [x] Bare-bone HTML
+- [x] Work on the screens and their routing.
+- [x] Work on the timer
+
