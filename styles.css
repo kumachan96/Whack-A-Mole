@@ -123,3 +123,10 @@ body {
 .hole.up .mole {
   top: 0;
 }
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}

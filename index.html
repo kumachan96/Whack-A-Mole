@@ -16,16 +16,11 @@
       </div>
       <div id="game-screen" class="hide">
         <div class="UtilBar">
-          <span id="timer">Time Left : <span id="timeleft">10</span></span>
-          <button id="pause-btn" class="btn pause-btn">Pause</button>
-          <span id="score">Score : 00</span>
+          <span class="timer" id="timer">Time Left : <span id="timeleft">10</span></span>
+          <!-- <button id="pause-btn" class="btn pause-btn">Pause</button> -->
+          <span class="score" id="score">Score : <span id="current-score">0</span></span>
         </div>
         <div class="container game center">
-          <!-- <img
-            src="https://c.tenor.com/hB9OTbewrikAAAAi/work-work-in-progress.gif"
-            alt="GAME"
-            class="center"
-          /> -->
           <div class="hole hole1">
             <div class="mole"></div>
           </div>
@@ -58,7 +53,7 @@
       <div id="game-over-screen" class="hide">
         <h2>Game Over</h2>
         <h2>Time's Up !!</h2>
-        <p id="score">Your score is 000</p>
+        <p id="score">Your score is <span id="game-over-score">0</span></p>
         <div class="controls">
           <button id="play-again-btn" class="play-btn btn">Play Again</button>
           <button id="main-menu-btn" class="menu-btn btn">Main Menu</button>
