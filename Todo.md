@@ -2,12 +2,11 @@
 
 ### :x: Todo 
 
-- [ ] Further Front-end work
 - [ ] Tidy up the code base
 
 ### :warning: In Progress 
 
-- [ ] work the game (Whack-A-Mole) 
+- [ ] Further Front-end work
 
 ### :white_check_mark: Done 
 
@@ -15,4 +14,5 @@
 - [x] Bare-bone HTML
 - [x] Work on the screens and their routing.
 - [x] Work on the timer
+- [x] work the game (Whack-A-Mole) 
 
