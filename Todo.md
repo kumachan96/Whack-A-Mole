@@ -7,6 +7,10 @@
 ### :warning: In Progress 
 
 - [ ] Further Front-end work
+  - [ ] Buttons
+  - [ ] Main Screen
+  - [ ] Game Screen
+  - [ ] Game over Screen 
 
 ### :white_check_mark: Done 
 
