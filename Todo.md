@@ -10,7 +10,7 @@
   - [x] Buttons
   - [x] Main Screen
   - [x] Game Screen Text
-  - [ ] Game Screen Game
+  - [x] Game Screen Game
   - [ ] Game over Screen 
 
 ### :white_check_mark: Done 
