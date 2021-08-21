@@ -147,7 +147,7 @@ main-screen {
 .score {
   font-family: 'Roboto', sans-serif;
   float: right;
-  padding: 2px 1.8rem;
+  padding: 0.3rem 1.8rem;
   font-weight: BOLD;
   font-size: x-large;
   color: #ffd166
@@ -156,7 +156,7 @@ main-screen {
 .timer {
   font-family: 'Roboto', sans-serif;
   float: left;
-  padding: 2px 1.5rem;
+  padding: 0.3rem 1.5rem;
   font-weight: BOLD;
   font-size: x-large;
   color: #EF476F;
@@ -176,11 +176,14 @@ main-screen {
 
 .game {
   width: 700px;
-  height: 700px;
-  background-color: #000000;
+  height: 720px;
+  background-color: #192635;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  /* box-shadow: 0 0 10px 1px; */
 }
 
 .hole {
@@ -205,18 +208,20 @@ main-screen {
   background-size: 60%;
   position: absolute;
   top: 100%;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
-  background-color: #f0f0f0;
-  padding: 100;
-  transition:all 0.4s;
+  background-color: #06d6a0;
 }
 
 .hole.up .mole {
   top: 0;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
 }
-
 /* .score {
   background: rgba(255,255,255,0.2);
   padding: 0 3rem;
@@ -228,4 +233,36 @@ main-screen {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
