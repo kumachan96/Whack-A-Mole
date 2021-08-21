@@ -145,13 +145,21 @@ main-screen {
 } */
 
 .score {
+  font-family: 'Roboto', sans-serif;
   float: right;
-  padding: 0 1rem;
+  padding: 2px 1.8rem;
+  font-weight: BOLD;
+  font-size: x-large;
+  color: #ffd166
 }
 
 .timer {
+  font-family: 'Roboto', sans-serif;
   float: left;
-  padding: 0 1rem;
+  padding: 2px 1.5rem;
+  font-weight: BOLD;
+  font-size: x-large;
+  color: #EF476F;
 }
 
 .end-screen {
@@ -202,7 +210,7 @@ main-screen {
   border-radius: 50%;
   background-color: #f0f0f0;
   padding: 100;
-  /* transition:all 0.4s; */
+  transition:all 0.4s;
 }
 
 .hole.up .mole {
