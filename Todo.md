@@ -7,8 +7,8 @@
 ### :warning: In Progress 
 
 - [ ] Further Front-end work
-  - [ ] Buttons
-  - [ ] Main Screen
+  - [x] Buttons
+  - [x] Main Screen
   - [ ] Game Screen
   - [ ] Game over Screen 
 
