@@ -9,7 +9,8 @@
 - [ ] Further Front-end work
   - [x] Buttons
   - [x] Main Screen
-  - [ ] Game Screen
+  - [x] Game Screen Text
+  - [ ] Game Screen Game
   - [ ] Game over Screen 
 
 ### :white_check_mark: Done 
