@@ -10,17 +10,18 @@
   </head>
   <body>
     <div class="container center">
-      <div id="main-screen">
+      <div id="main-screen" class="main-screen">
         <h1>WHACK-A-MOLE</h1>
-        <button id="play-btn" class="play-btn btn">Play</button>
+        <button id="play-btn" class="play-btn btn center">Play</button>
       </div>
+
       <div id="game-screen" class="hide">
-        <div class="UtilBar">
+        <div class="score-bar">
           <span class="timer" id="timer">Time Left : <span id="timeleft">10</span></span>
           <!-- <button id="pause-btn" class="btn pause-btn">Pause</button> -->
           <span class="score" id="score">Score : <span id="current-score">0</span></span>
         </div>
-        <div class="container game center">
+        <div id="game" class="game">
           <div class="hole hole1">
             <div class="mole"></div>
           </div>
@@ -48,15 +49,25 @@
           <div class="hole hole9">
             <div class="mole"></div>
           </div>
+          <div class="hole hole10">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole11">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole12">
+            <div class="mole"></div>
+          </div>
         </div>
       </div>
-      <div id="game-over-screen" class="hide">
-        <h2>Game Over</h2>
+
+      <div id="game-over-screen" class="end-screen hide">
+        <h1>Game Over</h1>
         <h2>Time's Up !!</h2>
         <p id="score">Your score is <span id="game-over-score">0</span></p>
         <div class="controls">
           <button id="play-again-btn" class="play-btn btn">Play Again</button>
-          <button id="main-menu-btn" class="menu-btn btn">Main Menu</button>
+          <button id="main-menu-btn" class="main-btn btn">Main Menu</button>
         </div>
       </div>
     </div>
