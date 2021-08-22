@@ -2,16 +2,12 @@
 
 ### :x: Todo 
 
-- [ ] Tidy up the code base
+- [ ] Work on Documentation
 
 ### :warning: In Progress 
 
-- [ ] Further Front-end work
-  - [x] Buttons
-  - [x] Main Screen
-  - [x] Game Screen Text
-  - [x] Game Screen Game
-  - [ ] Game over Screen 
+- [ ] Tidy up the code base
+
 
 ### :white_check_mark: Done 
 
@@ -20,4 +16,9 @@
 - [x] Work on the screens and their routing.
 - [x] Work on the timer
 - [x] work the game (Whack-A-Mole) 
-
+- [x] Further Front-end work
+  - [x] Buttons
+  - [x] Main Screen
+  - [x] Game Screen Text
+  - [x] Game Screen Game
+  - [x] Game over Screen 
