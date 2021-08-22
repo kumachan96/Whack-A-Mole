@@ -25,10 +25,9 @@ h1 {
 }
 
 p {
-  color: #f1c40f;
-  font-size: 1.2rem;
+  color: #FF7F11;
+  font-size: 4rem;
   width: 100%;
-  padding: 20px;
   text-align: center;
 }
 
@@ -112,7 +111,6 @@ p {
   background-color: lightcoral;
   color: white;
 }
-
 .pause-btn:hover{
   background-color:lightsalmon;
   border-color: lightsalmon;
@@ -187,7 +185,7 @@ p {
 }
 
 .hole {
-  flex: 1 0 33.33%;
+  flex: 1 0 25%;
   padding: 1rem;
   overflow: hidden;
   position: relative;
@@ -208,8 +206,8 @@ p {
   background-size: 60%;
   position: absolute;
   top: 100%;
-  width: 70%;
-  height: 70%;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background-color: #06d6a0;
 }
