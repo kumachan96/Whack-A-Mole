@@ -1,5 +1,3 @@
-// console.log(`Hello World 😊 `);
-
 // HTML Components
 const playButton = document.getElementById("play-btn");
 const mainMenuButton = document.getElementById("main-menu-btn");
@@ -71,7 +69,7 @@ function mainMenu() {
 function playAgain() {
   console.log(`Pressed play again`);
   show_hide(gameScreen, gameOverScreen);
-  startGame(); // resets score and the timer 
+  startGame();                           // resets score and the timer inside
 }
 
 // Whack-A-Mole Game and related functions
@@ -130,9 +128,8 @@ function whack(e) {
 // Adding event listeners for all circles
 circles.forEach((circle) => circle.addEventListener("click", whack));
 
-// Starts Whack-A-Mole by resetting scores and spawing circles
+// Starts Whack-A-Mole by resetting scores and spawing circles till the time is up
 function WhackAMole() {
-  // scoreBoard.textContent = 0;
   currentScore.innerHTML = 0;
   timeUp = false;
   score = 0;
