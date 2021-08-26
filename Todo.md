@@ -2,12 +2,12 @@
 
 ### :x: Todo 
 
-- [ ] Work on Documentation
 
 ### :warning: In Progress 
 
-- [ ] Tidy up the code base
-
+- [ ] Work on Documentation
+  - [ ] README.md
+  - [ ] Report
 
 ### :white_check_mark: Done 
 
@@ -22,3 +22,5 @@
   - [x] Game Screen Text - `Aug 22, 2021`
   - [x] Game Screen Game - `Aug 22, 2021`
   - [x] Game over Screen - `Aug 23, 2021`
+- [x] Tidy up the code base - `Aug 26, 2021`
+ 
