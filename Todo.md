@@ -2,11 +2,12 @@
 
 ### :x: Todo 
 
+- **All Done !**
 
 ### :warning: In Progress 
 
 - [ ] Work on Documentation
-  - [ ] README.md
+  - [x] README.md - `Aug 26, 2021`
   - [ ] Report
 
 ### :white_check_mark: Done 
