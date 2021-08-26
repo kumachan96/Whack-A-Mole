@@ -4,7 +4,6 @@
 }
 
 body {
-  /* background-color: darkcyan; */
   background-color: #355070;
   padding : 0;
   margin : 0;
@@ -31,7 +30,6 @@ p {
   text-align: center;
 }
 
-
 .container {
     height:75vh;
     width:80vw;
@@ -45,23 +43,7 @@ p {
     box-shadow: 0 0 10px 1px;
 }
 
-/* .btn {
-  border: 2px solid;
-  border-radius: 50px;
-  padding: 5px 10px;
-	@@ -35,17 +56,61 @@ body {
-  outline: none;
-}
-.btn:hover {
-  background-color: greenyellow;
-  color: white;
-} 
-/* .play-btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-} */
-
+/* Buttons Styling */
 .btn {
   box-sizing: border-box;
   appearance: none;
@@ -106,17 +88,7 @@ p {
   box-shadow: 0 0 40px 40px #2ecc71 inset;
 }
 
-/* .pause-btn {
-  border-color: lightcoral;
-  background-color: lightcoral;
-  color: white;
-}
-.pause-btn:hover{
-  background-color:lightsalmon;
-  border-color: lightsalmon;
-  color:lightcoral;
-} */
-
+/* General Styling */
 .hide{
   display:none;
   padding: 0;
@@ -127,20 +99,11 @@ p {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  /* width: 80%; */
 }
-
-/* .MainScreen {
-  border: 3px solid blue;
-} */
 
 .main-screen {
   padding: 13rem 0;
 }
-
-/* .score-bar {
-  padding: 15rem 0;
-} */
 
 .score {
   font-family: 'Roboto', sans-serif;
@@ -172,6 +135,7 @@ p {
   border: 3px solid red;
 }
 
+/* Game Components Styling */
 .game {
   width: 700px;
   height: 720px;
@@ -181,17 +145,17 @@ p {
   margin: auto;
   border-radius: 1rem;
   padding: 1rem;
-  /* box-shadow: 0 0 10px 1px; */
 }
 
-.hole {
+.pos {
+  flex: 1 0 25%;
   flex: 1 0 25%;
   padding: 1rem;
   overflow: hidden;
   position: relative;
 }
 
-.hole:after {
+.pos:after {
   display: block;
   background-size: contain;
   content: "";
@@ -202,17 +166,17 @@ p {
   bottom: -30px;
 }
 
-.mole {
+.circle {
   background-size: 60%;
   position: absolute;
   top: 100%;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background-color: #06d6a0;
 }
 
-.hole.up .mole {
+.pos.up .circle {
   top: 0;
   animation: fadeIn 1s;
   -webkit-animation: fadeIn 1s;
@@ -220,12 +184,7 @@ p {
   -o-animation: fadeIn 1s;
   -ms-animation: fadeIn 1s;
 }
-/* .score {
-  background: rgba(255,255,255,0.2);
-  padding: 0 3rem;
-  line-height: 1;
-  border-radius: 1rem;
-} */
+
 
 .controls {
   display: inline-flex;

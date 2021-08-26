@@ -1,29 +1,32 @@
 // console.log(`Hello World 😊 `);
 
+// HTML Components
 const playButton = document.getElementById("play-btn");
-// const pauseButton = document.getElementById("pause-btn");
 const mainMenuButton = document.getElementById("main-menu-btn");
 const playAgainButton = document.getElementById("play-again-btn");
 const mainScreen = document.getElementById("main-screen");
 const gameScreen = document.getElementById("game-screen");
 const gameOverScreen = document.getElementById("game-over-screen");
 
-const GAME_TIME_SECONDS = 10;
+// Game Duration
+const GAME_TIME_SECONDS = 60;
 
+// Buttons Events
 playButton.addEventListener("click", startGame);
-// pauseButton.addEventListener("click", pauseGame);
 playAgainButton.addEventListener("click", playAgain);
 mainMenuButton.addEventListener("click", mainMenu);
 
+// Renders and Hides coresponding divs
 function show_hide(showPage, hidePage) {
   hidePage.classList.add("hide");
   showPage.classList.remove("hide");
 }
 
+// Timer and Helper Functions
 var timeout, timeLeft;
 timeLeft = document.getElementById("timeleft").innerHTML;
 
-function timerReset(){
+function timerReset() {
   document.getElementById("timeleft").innerHTML = GAME_TIME_SECONDS;
 }
 
@@ -43,100 +46,97 @@ function timerCountdown() {
   }
 }
 
+// Starts Timer and Game after Game Screen is Rendered
 function startGame() {
   console.log(`Game started`);
   show_hide(gameScreen, mainScreen);
   timerReset();
-  startWhack();
+  WhackAMole();
   timerCountdown();
 }
 
+// Updates Score and then renders Game Over Screen
 function gameOver() {
   document.getElementById("game-over-score").innerHTML = score;
   show_hide(gameOverScreen, gameScreen);
 }
 
-// function pauseGame() {
-//   console.log(`Game paused`);
-//   // timerPause();
-//   show_hide(gameOverScreen, gameScreen);
-// }
-
+// Main Menu Button Function in Game Over Screen
 function mainMenu() {
   console.log(`Returning to main menu`);
   show_hide(mainScreen, gameOverScreen);
 }
 
+// Play Again Button Function in Game Over Screen
 function playAgain() {
   console.log(`Pressed play again`);
   show_hide(gameScreen, gameOverScreen);
-  startGame();
-  // reset score and the timer
+  startGame(); // resets score and the timer 
 }
 
-// implement game
-const holes = document.querySelectorAll(".hole");
-const scoreBoard = document.getElementById("current-score");
-const moles = document.querySelectorAll(".mole");
+// Whack-A-Mole Game and related functions
 
-let lastHole;
+// HTML Components
+const positions = document.querySelectorAll(".pos");
+const currentScore = document.getElementById("current-score");
+const circles = document.querySelectorAll(".circle");
+
+let lastPos;
 let timeUp = false;
 let score = 0;
-
-// console.log(`holes : ${holes} scoreBoardd : ${scoreBoard} moles : ${moles}`)
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (min - max) + max);
 }
 
-// console.log(randomTime(0,100));
+// Generates Random Postion for the circle to spawn without spawing the same circle twice within 1 second.
+function randomPos(positions) {
+  const ids = Math.floor(Math.random() * positions.length);
+  const pos = positions[ids];
 
-function randomHole(holes) {
-  const ids = Math.floor(Math.random() * holes.length);
-  const hole = holes[ids];
-
-  if (hole === lastHole) {
-    console.log("same last hole");
-    return randomHole(holes);
+  if (pos === lastPos) {
+    console.log(`Repeated Position`);
+    return randomPos(positions);
   }
 
-  lastHole = hole;
-  return hole;
+  lastPos = pos;
+  return pos;
 }
 
-// console.log(randomHole(holes));
+//  Spawns Circles randomly using randomPos() and randomTime()
+//  by adding a class up with related CSS properties in an interval using setTimeout()
+//  This works recursively till the time is up.
+function spawnCircle() {
+  const minTime = (GAME_TIME_SECONDS / 2) * 10; // 300
+  const maxTime = GAME_TIME_SECONDS * 3 * 10;   // 1800
+  const time = randomTime(minTime, maxTime);
+  const pos = randomPos(positions);
 
-function peep() {
-  const time = randomTime(200, 1000);
-  const hole = randomHole(holes);
-
-  // console.log(`time : ${time}, hole : ${hole}`);
-
-  hole.classList.add("up");
+  pos.classList.add("up");
 
   setTimeout(() => {
-    hole.classList.remove("up");
-    if (!timeUp) peep();
+    pos.classList.remove("up");
+    if (!timeUp) spawnCircle();
   }, time);
 }
 
-
-function whack(e){
+// Function when the circle is clicked, making it disappear by removing up CSS class and increasing score
+function whack(e) {
   score++;
   this.parentNode.classList.remove("up");
-  // scoreBoard.textContent = score;
-  scoreBoard.innerHTML = score;
+  currentScore.innerHTML = score;
 }
 
-moles.forEach((mole) => mole.addEventListener("click", whack));
+// Adding event listeners for all circles
+circles.forEach((circle) => circle.addEventListener("click", whack));
 
-
-function startWhack() {
+// Starts Whack-A-Mole by resetting scores and spawing circles
+function WhackAMole() {
   // scoreBoard.textContent = 0;
-  scoreBoard.innerHTML = 0;
+  currentScore.innerHTML = 0;
   timeUp = false;
   score = 0;
-  peep();
+  spawnCircle();
   setTimeout(() => {
     timeUp = true;
     console.log("game over");
